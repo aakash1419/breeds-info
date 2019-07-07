@@ -1,4 +1,4 @@
-import React from 'ract';
+import React from 'react';
 import {getAllBreeds} from './actions';
 import{connect} from 'react-redux';
 
@@ -12,7 +12,7 @@ class BreedsList extends React.Component{
                 {this.props.breedInfo.breeds.map(
                     (item, index) => {
                         return(
-                            <div key={i}>
+                            <div>
                                 <h3>{item.id}. {item.title}</h3>
                                 <p>{item.body}</p>
                             </div>
@@ -26,7 +26,7 @@ class BreedsList extends React.Component{
 
 const mapStateToProps = (state) => {
     return(
-        {breedInfo: state.BreedsList}
+        {breedInfo: BreedsList.state}
     );
 }
 
