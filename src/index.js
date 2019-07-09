@@ -8,6 +8,7 @@ import {createStore, applyMiddleware} from 'redux';
 import {Provider} from 'react-redux';
 import thunk from 'redux-thunk';
 import combineReducers from './reducer/index';
+import { BreedList } from './breeds-source/reducers';
 
 const we = applyMiddleware(thunk);
 

@@ -28,7 +28,7 @@ class BreedsList extends React.Component{
 
 const mapStateToProps = state => {
     return(
-        {breedInfo: state.BreedsList}
+        {breedInfo: state.BreedList}
     );
 }
 
