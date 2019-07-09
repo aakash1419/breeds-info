@@ -1,17 +1,17 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from './App';
+import {App} from './App';
 import * as serviceWorker from './serviceWorker';
 
 import {createStore, applyMiddleware} from 'redux';
 import {Provider} from 'react-redux';
 import thunk from 'redux-thunk';
-import { BreedList } from './breeds-source/reducers';
+import combineReducers from './reducer/index';
 
 const we = applyMiddleware(thunk);
 
-const store = createStore(BreedList, we);
+const store = createStore(combineReducers, we);
 
 ReactDOM.render(
     <Provider store={store}>

@@ -8,7 +8,6 @@ export const getAllBreeds = () => {
         dispatch => {
             axios.get('http://jsonplaceholder.typicode.com/posts')
             .then(res => {
-                console.log(res);
                 return(dispatch({type: GET_ALL_BREEDS, payload: res.data}))
             })
         }
